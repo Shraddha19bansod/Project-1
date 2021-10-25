@@ -1,0 +1,249 @@
+
+/* HEADER-1 */
+.header-1{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem ;
+}
+.header-1 a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+ } 
+.header-1 .search-box-container{
+    display: flex;
+    float: right;
+   }
+.header-1 .search-box-container .material-icons{
+    font-size:30px;
+    margin-right: 12px;
+    margin-top: 13px;
+}
+.header-1 .search-box-container #search-box{
+    height: 30px;
+    width: 150%;
+    padding: 1rem;
+    margin-top: 8px;
+    margin-right: 11px;
+    font-size: 1rem;
+    color: #333;
+    border: .1rem solid rgba(0,0,0,3);
+    border-radius: 20px;
+    text-transform: none;
+    }
+/* HEADER-2 */
+.header-2 {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    background-color: rgb(127, 208, 211);
+    }
+.header-2 a{
+    margin-left: 35px;
+    color: black;
+    text-decoration: none;
+   }
+ #icon1 {
+    float: right;
+    display: flex;
+    font-size:18px;
+    margin-right: 85px;
+    margin-top: 9px; 
+    }
+   
+/* SECTION -1  OFFERS */   
+.section-1 a{
+    font-size: 25px;
+    color: brown;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.section-1{
+    text-align: center;
+}
+ /* SECTION -2  MEN/WEMEN */ 
+ #banner{
+    display: flex;
+ }  
+#banner-1{
+    position: relative;
+}
+#banner-1 img{
+    position: relative;
+    height: 450px;
+    width: 750px;
+    padding: 10px 0px 0px 35px;
+}
+#banner-1 .btn{
+    position: absolute;
+    display: block;
+    top: 85%;
+    left: 75.5%;
+    background-color:transparent;
+    color: black;
+    font-weight: bolder;
+    border:1px solid rgb(176, 227, 250);
+    font-size: 17px;
+    padding: 10px 65px 12px;
+    cursor: pointer;
+    border-radius: 7px;
+    text-align: right;
+   }
+#banner-2{
+    position: relative;
+}
+#banner-2 img{
+    position: relative;
+    height: 450px;
+    width: 750px;
+    padding: 10px 25px 0px 0px;
+}
+#banner-2 .btn{
+    position: absolute;
+    display: block;
+    top: 85%;
+    left: 2.7%;
+    background-color:transparent;
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 10px 65px 12px;
+    border:1px solid pink;
+    cursor: pointer;
+    border-radius: 7px;
+    } 
+#banner-2 .btn:hover,#banner-1 .btn:hover{
+    background-color: white;
+    color:black;
+    font-size: 17.5px;
+    
+}       
+/* SECTION -3  BEST SELLERS */ 
+.section-3{
+    margin: auto;
+    padding: 12%;
+}
+.Title h3{
+    margin-top: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.section-3 h4{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px 0px 5% 0px;
+    font-family: 'Merriweather',serif;
+    font-weight: bold;
+}
+.row-1,.row-2,.row-3,.row-4 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5% ;
+}
+/* MEN/WOMEN COLLECTION difft pages*/
+.displayNone{
+    display: none;
+}
+.removeFlex{
+    display: block !important;
+    text-align: center;
+}
+#Mproducts {
+ display:flex ;
+ justify-content: center;
+ 
+ flex-wrap: wrap;
+ 
+}
+.card{
+     height: 450px;
+     width: 350px;
+     border: 1px solid black;
+     text-align: center;
+     margin: 15px;
+   }
+.p-name{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: chocolate;
+    }
+.p-details{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}    
+.p-price{
+    font-weight: bold;
+    color: rgb(116, 24, 24);
+    font-size: large;
+}    
+.p-img,img{
+    height: 300px;
+    width: 348px;
+}       
+
+.Pbtn{
+   background-color: rgb(127, 208, 211);;
+   color: black;
+   width: 100%;
+  margin-top: 42px;
+   padding: 5px;
+   border-radius: 6px;
+
+}
+   
+
+
+ /* SECTION -PARTNER  // PARTNERS */
+ #partner-section h4{
+     font-size: 18px;
+     margin-top: 15px;
+ }
+ #partner-section {
+     text-align: center;
+     }
+.partners{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3%;
+    
+}.partners img{
+    margin-bottom: 70px;
+    padding:30px 0px 30px 50px;
+    height: 160px;
+    width: 240px;
+    color: rgb(56, 54, 54);
+}
+
+
+ 
+/* FOOTER */
+footer{
+    font-size: 18px;
+    background-color: rgb(173, 171, 171);
+ }
+ .footer{
+    display: flex;
+    padding: 30px 20px 10% 40px;
+   }
+ .f-1 {
+    margin: 5px;
+    padding: 2px 600px 20px 5px;
+ }
+ .f-2-1 ul{
+    display: flex;
+    list-style-type:none;
+ }
+ .f-2-1 img{
+   height: 54px;
+   width: 50px;
+   padding: 20px 24px 0px 0px;
+ }
+ footer .text{
+    font-size: 14px;
+    background-color: rgb(218, 214, 214) ;
+ }
