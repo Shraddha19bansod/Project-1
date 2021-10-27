@@ -17,30 +17,35 @@
     </style>
 </head>
 <!--HEADER PART-->
-<header>
-    <div class="header-1">
-        <a href="#" class="logo"><i class="shopping"></i>
-            <h2 style="font-size: 40px; font-weight: bolder;">FOOTWEAR</h2>
-        </a>
-        <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="search here...">
-            <i class="material-icons">search</i>
-        </form>
-    </div>
-    <div class="header-2">
-        <nav class="navbar">
-            <a href="#">HOME</a>
-            <a href="products.html">PRODUCTS</a>
-            <a href="#">ABOUT </a>
-            <a href="#">CONTACT</a>
-        </nav>
-        <div id="icon1" onclick="goToBag()">
-            <a href="cart.html">
-                <i class="material-icons">shopping_bag</i>
-                <span id="cart-count" style="font-size: 0.7em; background-color: darkred; color: white;"></span>
+<!--<header>
+    <div class="col-h-1">
+        <div class="header-1">
+            <a href="#" class="logo"><i class="shopping"></i>
+                <h2 style="font-size: 40px; font-weight: bolder;">FOOTWEAR</h2>
             </a>
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here...">
+                <i class="material-icons">search</i>
+            </form>
         </div>
     </div>
+    <div class="col-h-2">
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#">HOME</a>
+                <a href="products.html">PRODUCTS</a>
+                <a href="#">ABOUT </a>
+                <a href="#">CONTACT</a>
+            </nav>
+            <div id="icon1" onclick="goToBag()">
+
+                <i class="material-icons" onclick="goToBag()">shopping_bag</i>
+                <span id="cart-count" style="font-size: 0.7em; background-color: darkred; color: white;"></span>
+
+            </div>
+        </div>
+    </div>
+
 </header>
 <!--  BODY PART-->
 <section>
@@ -53,41 +58,37 @@
         </h3>
     </div>
     <div id="banner">
-        <div id="banner-1">
+        <div class="banner-1">
             <img src="Image/M1.jpg" />
-            <a href="men.html"> <button class="btn">MEN</button></a>
         </div>
-        <div id="banner-2">
+        <div class="banner-1">
             <img src="Image/W1.jpg" />
-            <a href="women.html"> <button class="btn">WOMEN</button> </a>
         </div>
     </div>
     <div class="section-3">
         <h4>BEST SELLERS</h4>
-        <div id="Mproduct">
-            <div class="row-1">
-                <img src="Image/3.jpg " />
-                <img src="Image/1.jpg" />
-                <img src="Image/9.jpg" />
-                <img src="Image/shoe2.jpg" />
-            </div>
-            <div class="row-2">
-                <img src="Image/2.jpg" />
-                <img src="Image/shoe7.jpg" />
-                <img src="Image/MFlat.jpg" />
-                <img src="Image/img5.jpg" />
-            </div>
+        <div id="Mproduct"></div>
+        <div class="card-2">
+            <img src="Image/3.jpg " />
+            <img src="Image/1.jpg" />
+            <img src="Image/9.jpg" />
+            <img src="Image/shoe2.jpg" />
+            <img src="Image/2.jpg" />
+            <img src="Image/shoe7.jpg" />
+            <img src="Image/MFlat.jpg" />
+            <img src="Image/img5.jpg" />
         </div>
+
         <div class="row">
             <p>
-                <a href="#">Shop All Product</a>
+                <a href="products.html"><button> Shop All Product</button></a>
             </p>
         </div>
     </div>
 
     <!--trusted partners-->
     <div id="partner-section">
-        <h4 class="h-primary center">TRUSTED PARTNERS</h4>
+        <h4 class="primary center">TRUSTED PARTNERS</h4>
 
         <div class="partners">
             <div class="partner-logo">
@@ -110,9 +111,7 @@
 <footer>
     <div class="footer">
         <div class="f-1">
-            <a href="#" style="color:black;">
                 <h4>ABOUT FOOTWEAR</h4>
-            </a>
             <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life
             </p>
         </div>
@@ -126,18 +125,17 @@
                 </ul>
             </div>
             <div class="f-2-2">
-                <a href="#" style="color:black;">
-                    <h5 style="font-size: 24px;">Address:</h5>
-                </a>
+                    <h5>Address:</h5>
+                
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, delectus.</p>
             </div>
         </div>
     </div>
-    <div class="text">
-        <p style="text-align: center;"><span>Copyright &copy2021 All rights reserved</span></p>
-    </div>
+    
 </footer>
-
+<div class="text">
+    <p style="text-align: center;"><span>Copyright &copy2021 All rights reserved</span></p>
+</div>
 </body>
 
 </html>

@@ -1,3 +1,30 @@
+  @media (max-width: 767px) {
+    /* for mobile */
+    #banner{
+        margin: 10px;
+    }
+    .banner-1{
+        width: 100% !important;
+        height: 50% !important;
+    }
+    .card-2 {
+        width: 100%;
+        margin:0 !important;
+    }
+    .card-2 img{
+        height: 150px !important;
+        width: 100px !important;
+    }
+    .row button{
+        padding: 0px 5px !important;
+    }
+    .partners{
+        height: 40px   
+    }
+
+    
+ }  
+ 
 
 /* HEADER-1 */
 .header-1{
@@ -51,6 +78,9 @@
     margin-right: 85px;
     margin-top: 9px; 
     }
+ #icon1 i .material-icons{
+     pointer-events: stroke;
+ }   
    
 /* SECTION -1  OFFERS */   
 .section-1 a{
@@ -65,65 +95,25 @@
  /* SECTION -2  MEN/WEMEN */ 
  #banner{
     display: flex;
+    flex-wrap: wrap;
+    margin-top:20px ;
+   } 
+ .banner-1{
+     width: 50%;
+     height: 50%;
  }  
-#banner-1{
-    position: relative;
-}
-#banner-1 img{
-    position: relative;
-    height: 450px;
-    width: 750px;
-    padding: 10px 0px 0px 35px;
-}
-#banner-1 .btn{
-    position: absolute;
-    display: block;
-    top: 85%;
-    left: 75.5%;
-    background-color:transparent;
-    color: black;
-    font-weight: bolder;
-    border:1px solid rgb(176, 227, 250);
-    font-size: 17px;
-    padding: 10px 65px 12px;
-    cursor: pointer;
-    border-radius: 7px;
-    text-align: right;
-   }
-#banner-2{
-    position: relative;
-}
-#banner-2 img{
-    position: relative;
-    height: 450px;
-    width: 750px;
-    padding: 10px 25px 0px 0px;
-}
-#banner-2 .btn{
-    position: absolute;
-    display: block;
-    top: 85%;
-    left: 2.7%;
-    background-color:transparent;
-    color: black;
-    font-weight: bolder;
-    font-size: 17px;
-    padding: 10px 65px 12px;
-    border:1px solid pink;
-    cursor: pointer;
-    border-radius: 7px;
-    } 
-#banner-2 .btn:hover,#banner-1 .btn:hover{
-    background-color: white;
-    color:black;
-    font-size: 17.5px;
-    
-}       
+ .banner-1 img{
+    height: 100%;
+    width: 100%;
+} 
+
+      
 /* SECTION -3  BEST SELLERS */ 
-.section-3{
-    margin: auto;
-    padding: 12%;
+.section-3 {
+   
+    text-align: center;
 }
+
 .Title h3{
     margin-top: 35px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -131,16 +121,32 @@
     text-decoration: underline;
 }
 .section-3 h4{
-    text-align: center;
-    font-size: 35px;
-    padding: 20px 0px 5% 0px;
+    font-size: 32px;
+    padding: 90px 0px 5% 0px;
     font-family: 'Merriweather',serif;
     font-weight: bold;
 }
-.row-1,.row-2,.row-3,.row-4 {
+.card-2{
     display: flex;
-    justify-content: space-evenly;
-    margin: 5% ;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5% 25%;
+}
+.card-2 img{
+    height: 320px;
+    width: 250px;
+    border: 1px solid black;
+    text-align: center;
+}
+.row{
+    margin:10% 0px;
+}
+.row button{
+    text-align: center;
+    border-radius: 10px;
+    padding: 0px 30px 0px 30px;
+    background-color: rgb(201, 198, 198);
+    font-weight: bold;
 }
 /* MEN/WOMEN COLLECTION difft pages*/
 .displayNone{
@@ -150,13 +156,26 @@
     display: block !important;
     text-align: center;
 }
+
+#ProBtn{
+    margin:45px  0px  ;
+}
+#ProBtn button{
+    width: 20%; 
+    padding: 3px 0px 3px 0px;
+    border-radius: 8px;
+    background-color: rgb(0, 55, 128);
+    color: white;
+    border: 2px solid rgb(79, 190, 224) ;
+    font-weight: bold;
+    font-size: 20px;
+}
 #Mproducts {
  display:flex ;
  justify-content: center;
- 
  flex-wrap: wrap;
- 
-}
+ margin-bottom: 20px;
+ }
 .card{
      height: 450px;
      width: 350px;
@@ -190,15 +209,13 @@
    background-color: rgb(127, 208, 211);;
    color: black;
    width: 100%;
-  margin-top: 42px;
+   margin-top: 42px;
    padding: 5px;
    border-radius: 6px;
-
 }
    
-
-
- /* SECTION -PARTNER  // PARTNERS */
+/* SECTION -PARTNER  // PARTNERS */
+ 
  #partner-section h4{
      font-size: 18px;
      margin-top: 15px;
@@ -208,15 +225,13 @@
      }
 .partners{
     display: flex;
+    height: 100px;
     justify-content: space-evenly;
-    padding-top: 3%;
-    
-}.partners img{
-    margin-bottom: 70px;
-    padding:30px 0px 30px 50px;
-    height: 160px;
-    width: 240px;
-    color: rgb(56, 54, 54);
+    margin: 30px 0px 30px 0px;
+   }
+.partners img{
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -224,26 +239,29 @@
 /* FOOTER */
 footer{
     font-size: 18px;
-    background-color: rgb(173, 171, 171);
+    background-color: rgb(206, 205, 205);
  }
  .footer{
     display: flex;
-    padding: 30px 20px 10% 40px;
-   }
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 15px;
+}
  .f-1 {
-    margin: 5px;
-    padding: 2px 600px 20px 5px;
+     margin:10px 0px 10px 5px;
  }
+
  .f-2-1 ul{
     display: flex;
+    justify-content: space-between;
     list-style-type:none;
  }
  .f-2-1 img{
-   height: 54px;
+   height: 50px;
    width: 50px;
-   padding: 20px 24px 0px 0px;
+
  }
  footer .text{
     font-size: 14px;
-    background-color: rgb(218, 214, 214) ;
+    background-color: rgb(247, 242, 242) ;
  }
