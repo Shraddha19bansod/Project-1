@@ -21,69 +21,117 @@
     .partners{
         height: 40px   
     }
-
+    /* Header menu part*/
+    .header-1 span{
+        font-size: 32px !important;
+    }
     
- }  
+    .responsive {
+        position:relative;
+        
+    }
+    .menu-icon .material-icons{
+      position: relative;
+      padding: 10px;
+      float: left;
+      display: block !important;
+    }
+    .navbar a{display: none !important}
+    .responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      color: black;
+      padding: 8px 20px ;
+      text-decoration: none;
+      font-size: 19px;
+    }
+
+    /* CART part*/
+
+   F /*section */
+    .section-1 p{
+        font-size: 16px !important;
+        font-family:'Source Serif Pro', serif;;
+    }
+}  
  
 
 /* HEADER-1 */
 .header-1{
     background: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem ;
+    padding: 1rem ;
 }
 .header-1 a{
     text-decoration: none;
     font-weight: bolder;
     color: black;
  } 
-.header-1 .search-box-container{
+
+
+/* HEADER-2 */
+.header-2{
+    display: flex;
+    justify-content:space-between;
+    background-color:rgb(153, 245, 245);
+  
+}
+.navbar {
+    overflow: hidden;
+    }
+.navbar a {
+        float: left;
+        display: block;
+        color:black;
+        font-weight: bold;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+.navbar a:hover {
+    font-weight: bold;
+    border-radius: 10px;
+    color: black;
+  } 
+#search-bag{
+      
+      display:flex;
+      padding: 0px;
+  }
+ .menu-icon .material-icons{
+       display: none ; 
+  }
+.search-box-container{
     display: flex;
     float: right;
-   }
-.header-1 .search-box-container .material-icons{
+    padding: 17px;
+   }    
+ #icon1{
+    margin-top: 21px;
+    margin-right: 33px;
+    pointer-events:painted !important;
+ }  
+  
+.search-box-container .material-icons{
     font-size:30px;
-    margin-right: 12px;
-    margin-top: 13px;
-}
-.header-1 .search-box-container #search-box{
+    margin-right: 6px;
+    margin-top: 5px;
+}  
+.search-box-container .search-box{
     height: 30px;
     width: 150%;
     padding: 1rem;
-    margin-top: 8px;
-    margin-right: 11px;
     font-size: 1rem;
-    color: #333;
     border: .1rem solid rgba(0,0,0,3);
     border-radius: 20px;
     text-transform: none;
-    }
-/* HEADER-2 */
-.header-2 {
-    display: flex;
-    font-size: 18px;
-    justify-content: space-between;
-    background-color: rgb(127, 208, 211);
-    }
-.header-2 a{
-    margin-left: 35px;
-    color: black;
-    text-decoration: none;
-   }
- #icon1 {
-    float: right;
-    display: flex;
-    font-size:18px;
-    margin-right: 85px;
-    margin-top: 9px; 
-    }
- #icon1 i .material-icons{
-     pointer-events: stroke;
- }   
-   
+    }   
 /* SECTION -1  OFFERS */   
-.section-1 a{
+.section-1 p{
     font-size: 25px;
     color: brown;
     font-family:Arial, Helvetica, sans-serif;
@@ -130,7 +178,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 5% 25%;
+    margin: 5% 15%;
 }
 .card-2 img{
     height: 320px;
@@ -178,7 +226,7 @@
  }
 .card{
      height: 450px;
-     width: 350px;
+     width: 287px;
      border: 1px solid black;
      text-align: center;
      margin: 15px;
@@ -202,7 +250,7 @@
 }    
 .p-img,img{
     height: 300px;
-    width: 348px;
+    width: 285px;
 }       
 
 .Pbtn{
@@ -213,7 +261,45 @@
    padding: 5px;
    border-radius: 6px;
 }
-   
+
+/* Add to bag*/
+         
+ /* Totals section */
+.totals .totals-item {
+      float: right;
+      clear: both;
+      width: 100%;
+      margin-bottom: 10px;
+}
+.totals label {
+        float: left;
+        clear: both;
+        width: 79%;
+        text-align: right;
+      }
+      
+.totals-value {
+        float: right;
+        width: 21%;
+        text-align: right;
+      }
+ .checkout {
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #6b6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
+  }
+  
+  .checkout:hover {
+    background-color: #494;
+  }
+ .cart-img{
+     margin-bottom: 30%;
+ }    
 /* SECTION -PARTNER  // PARTNERS */
  
  #partner-section h4{

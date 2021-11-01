@@ -14,7 +14,7 @@ var product = [
         'url': 'Image/shoes3.jpg',
         'price': 650.00,
         'size': 8
-       
+
     },
     {
         'id': 3,
@@ -31,7 +31,7 @@ var product = [
         'url': 'Image/heels2.jpg',
         'price': 560.00,
         'size': 8
-       
+
     },
     {
         'id': 5,
@@ -72,7 +72,7 @@ var product = [
         'url': 'Image/5.jpg',
         'price': 370.00,
         'size': 8
-       
+
     },
     {
         'id': 10,
@@ -89,7 +89,7 @@ var product = [
         'url': 'Image/2.jpg',
         'price': 500.00,
         'size': 8
-       
+
     },
     {
         'id': 12,
@@ -114,7 +114,7 @@ var product = [
         'url': 'Image/S1.jpg',
         'price': 540.00,
         'size': 8
-        
+
     },
     {
         'id': 15,
@@ -139,7 +139,7 @@ var product = [
         'url': 'Image/sports.jpg ',
         'price': 630.00,
         'size': 8
-       
+
     },
     {
         'id': 18,
@@ -150,31 +150,59 @@ var product = [
         'size': 8
     }];
 
-function home(tab) {
-    var home = document.getElementsByTagName("body");
-    home.innerHTML
-}
-function product(tab) {
-    return;
-}
-function about(tab) {
-    return;
-}
-function contact(tab) {
-    return;
-}
-function cart(tab) {
-    return;
+
+var cartCount = 0;
+var cart = [];
+
+function loadIndex() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+
 }
 
+
+if (cartCount > 0) {
+    document.getElementById("cart-count").innerHTML = cartCount;
+}
+
+
+function goToProduct(gender) {
+    localStorage.setItem('gender', gender);
+    window.location.href = "products.html";
+}
+
+//header menu part
+function myFunction() {
+    var x = document.getElementById("Topnav");
+    if (x.className === "navbar") {
+        x.className = " responsive";
+        x.classList.remove("navbar");
+    } else {
+        x.classList.add("navbar");
+        x.className = "navbar";
+    }
+}
+
+// header search bar
+function myFunction1() {
+    var x = document.getElementById("search-box");
+    if (x.className === "search-box-container") {
+        x.className = " response";
+        x.classList.remove("search-box-container");
+    } else {
+        x.classList.add("search-box-container");
+        x.className = "search-box-container";
+    }
+}
 
 
 function loadData() {
+
+    var gender1 = localStorage.getItem('gender');
     let cards = product.map(item => {
         return `<div class="card" >
                 <div class="p-img">
                     <img  src="${item['url']}"></img>
-                </div>
+                    </div>
                 <div class="p-info">
                   <p class="p-name">${item['name']}</p>
                   <div class="p-details">
@@ -184,15 +212,16 @@ function loadData() {
                 </div>  
                <button class="Pbtn" onclick="addToBag(${item['id']})">Add To Bag</button>
             </div>`;
-
     });
     document.getElementById("Mproducts").innerHTML = cards.join('');
+    if (gender1 !== null) {
+        selectCategory(gender1);
+        localStorage.removeItem('gender');
+    }
 }
 
 function selectCategory(category) {
-
     if (category == 'male') {
-
         let mcards = product.map(item => {
             if (item['gender'] == 'male') {
                 return `<div class="card" >
@@ -211,11 +240,8 @@ function selectCategory(category) {
             }
         });
         document.getElementById("Mproducts").innerHTML = mcards.join('');
-
-
     }
     else if (category == 'female') {
-
         let wcards = product.map(data => {
             if (data['gender'] == 'female') {
                 return `<div class="card" >
@@ -237,77 +263,86 @@ function selectCategory(category) {
 
     }
     else {
-
         loadData();
-
     }
 }
 
-var cartCount = 0;
-var cart = [];
+
+
 function addToBag(pId) {
+    var cartData = JSON.parse(localStorage.getItem("cart") || '[]');
     product.map(data => {
         if (data['id'] == pId) {
-            cart.push(data);
+            cartData.push(data);
             cartCount++;
         }
     });
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    alert('Added To bag');
     if (cartCount > 0) {
         document.getElementById("cart-count").innerHTML = cartCount;
-    }
-    else{
-        document.getElementById("msg").innerHTML=cartCount;
     }
 }
 
+
 function removeFromBag(pId) {
-    cart.map(data => {
+    const addedcart = JSON.parse(localStorage.getItem("cart") || '[]');
+    addedcart.map(data => {
         if (data['id'] == pId) {
-            const index = cart.indexOf(data);
+            const index = addedcart.indexOf(data);
             if (index > -1) {
-                cart.splice(index, 1);
+                addedcart.splice(index, 1);
             }
             cartCount--;
-            goToBag();
         }
     });
-
-    if (cartCount > 0) {
-        document.getElementById("cart-count").innerHTML = cartCount;
-    }
-
+    localStorage.setItem("cart", JSON.stringify(addedcart));
+    alert('Deleted from bag');
+    goToBag();
 
 }
 
 
 function goToBag() {
-    const cartItems = cart.map(data => {
+    const addedcart = JSON.parse(localStorage.getItem("cart"));
+    const cartItems = addedcart.map(data => {
 
-        return `<div class="Cart-Items" style =" display:flex; justify-content: space-between; width =100%;">
-        <div class="image-box">
-        <img src="${data['url']}" style="height:150px; width:150px;"></img>
+        return ` <div class="Product-data" style="display:flex; justify-content: center;">
+        <div class="ImgCart">
+            <img  src="${data['url']}" class="cartImg" style="border: 1px solid black;" />
         </div>
-        <div class="about">
-            <h3 class="title">${data['name']}</h3>
-            <h5 class="subtitle"></h5>
-        </div>
-        <div class="counter">
-            <input class="cart-quantity-input" type="number" value="2">
+        <div class="product-Name" style="display: flex; flex-wrap: wrap; justify-content: space-between;margin: auto 0px auto 0px; ">
+            <h3>${data['name']}</h3>
+            <div>
+            <p> <b>Rs.${data['price']}</b></p>
+            <p>Size: ${data['size']}</p>
+            
+            
+            </div>
+           
         </div>
         
-            <div class="amount"> ${data['price']}</div>
-            <div class="save"><u>Save for later</u></div>
-            <div class="remove"><button onclick="removeFromBag(${data['id']})">Remove</button></div>
+        <div style="margin: auto 0px auto 15px;">
+               
+                <span style="color:darkred;" onclick="removeFromBag(${data['id']})" class="material-icons">delete_outline </span>
+            </div>
         
     </div>
     <hr>` ;
     });
-    document.getElementById("Mproducts").innerHTML = cartItems.join('');
-    var element = document.getElementById("ProBtn");
-    element.classList.add("displayNone");
-    var element1 = document.getElementById("Mproducts");
-    element1.classList.add("removeFlex");
+    getTotal(addedcart);
+    document.getElementById("shopping-cart").innerHTML = cartItems.join('');
 
+}
+
+function getTotal(cartArray) {
+    var total = 0;
+    for (var i = 0; i < cartArray.length; i++) {
+        total += cartArray[i].price;
+        // console.log(cartArray[i].price);
+    }
+    // console.log(cartArray);
+    document.getElementById("displayTotal").innerHTML = 'Rs. ' + total;
 }
 
 

@@ -18,25 +18,34 @@
     <!--HEADER PART-->
     <header>
         <div class="header-1">
-            <a href="#" class="logo"><i class="shopping"></i>
-                <h2 style="font-size: 40px; font-weight: bolder;">FOOTWEAR</h2>
+            <a href="Index.html" class="logo"><i class="shopping"></i>
+                <span style="font-size: 40px; font-weight: bolder; padding: auto 100px ;">FOOTWEAR</span>
             </a>
-            <form action="" class="search-box-container">
-                <input type="search" id="search-box" placeholder="search here...">
-                <i class="material-icons">search</i>
-            </form>
         </div>
         <div class="header-2">
-            <nav class="navbar">
+            <span href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
+                <span class="material-icons">
+                    menu
+                </span>
+            </span>
+            <div class="navbar" id="Topnav">
                 <a href="Index.html">HOME</a>
                 <a href="products.html">PRODUCTS</a>
                 <a href="Index.html">ABOUT </a>
                 <a href="Index.html">CONTACT</a>
-            </nav>
-            <div id="icon1">
-                <i class="material-icons" onclick="goToBag()">shopping_bag</i>
-                <span id="cart-count" style="font-size: 0.7em; background-color: darkred; color: white;"></span>
+
             </div>
+            <div id="search-bag">
+                <div class="search-box-container" id="search-box">
+                    <input type="search" class="search-box" placeholder="search here...">
+                    <i class="material-icons">search</i>
+             </div>
+             
+                <div id="icon1" >
+                    <a  href="cart.html" class="material-icons" >shopping_bag</a>
+                    <span id="cart-count" style="font-size: 0.7em; background-color: darkred; color: white;"></span>
+                </div>
+            
         </div>
     </header>
     <!--  BODY PART-->

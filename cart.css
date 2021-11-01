@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    .ImgCart{
+        width: 40% !important;
+    }
+    .product-Name{
+        width: 60%;
+    }
+    .cartImg{
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+
+
+}
+
+.ImgCart{
+    width: 20%;
+}
+.product-Name{
+    width: 40%;
+}
+.cartImg{
+    height: 150px;
+    width: 150px;
+}
+.total-field{
+    width: 60%;
+    font-size: larger;
+    font-weight: bold;  
+   margin: auto;
+}
+.total-value{
+    display: flex;
+    justify-content: space-between;
+}
