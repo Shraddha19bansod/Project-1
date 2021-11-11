@@ -88,12 +88,12 @@
         color:black;
         font-weight: bold;
         text-align: center;
-        padding: 14px 16px;
+        padding: 23px 17px;
         text-decoration: none;
         font-size: 20px;
       }
 .navbar a:hover {
-    font-weight: bold;
+    font-weight: bolder;
     border-radius: 10px;
     color: black;
   } 
@@ -102,8 +102,18 @@
       display:flex;
       padding: 0px;
   }
+  #cart-count{
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 2px 5px;
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+  }
  .menu-icon .material-icons{
        display: none ; 
+      
   }
 .search-box-container{
     display: flex;
@@ -120,6 +130,7 @@
     font-size:30px;
     margin-right: 6px;
     margin-top: 5px;
+   
 }  
 .search-box-container .search-box{
     height: 30px;
@@ -158,7 +169,6 @@
       
 /* SECTION -3  BEST SELLERS */ 
 .section-3 {
-   
     text-align: center;
 }
 
@@ -170,7 +180,7 @@
 }
 .section-3 h4{
     font-size: 32px;
-    padding: 90px 0px 5% 0px;
+    padding: 90px 0px 3% 0px;
     font-family: 'Merriweather',serif;
     font-weight: bold;
 }
@@ -178,7 +188,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 5% 15%;
+    margin: 3% 15%;
 }
 .card-2 img{
     height: 320px;
@@ -187,10 +197,11 @@
     text-align: center;
 }
 .row{
-    margin:10% 0px;
+    margin:5% 0px;
 }
 .row button{
     text-align: center;
+    font-size: 17px;
     border-radius: 10px;
     padding: 0px 30px 0px 30px;
     background-color: rgb(201, 198, 198);

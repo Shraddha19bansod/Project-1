@@ -10,10 +10,11 @@
         width: 100px !important;
     }
 
-
-
 }
-
+#search-bag{
+    padding: 0px;
+    
+}
 .ImgCart{
     width: 20%;
 }

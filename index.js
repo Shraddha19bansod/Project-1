@@ -153,17 +153,25 @@ var product = [
 
 var cartCount = 0;
 var cart = [];
-
 function loadIndex() {
     localStorage.setItem("cart", JSON.stringify(cart));
-
+    localStorage.setItem("countItem", cartCount);
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem"); 
 }
 
-
-if (cartCount > 0) {
-    document.getElementById("cart-count").innerHTML = cartCount;
+function loadCount(){
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem");
 }
 
+function proceedOrder(){
+    if (localStorage.getItem("countItem") < 1){
+     alert('Cart is Empty');
+     window.location.href = "products.html";
+    }
+    else{
+        window.location.href = "info.html";   
+    }
+}
 
 function goToProduct(gender) {
     localStorage.setItem('gender', gender);
@@ -196,7 +204,7 @@ function myFunction1() {
 
 
 function loadData() {
-
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem");
     var gender1 = localStorage.getItem('gender');
     let cards = product.map(item => {
         return `<div class="card" >
@@ -219,6 +227,7 @@ function loadData() {
         localStorage.removeItem('gender');
     }
 }
+
 
 function selectCategory(category) {
     if (category == 'male') {
@@ -274,14 +283,13 @@ function addToBag(pId) {
     product.map(data => {
         if (data['id'] == pId) {
             cartData.push(data);
-            cartCount++;
         }
     });
+    localStorage.setItem("countItem",cartData.length);
     localStorage.setItem("cart", JSON.stringify(cartData));
     alert('Added To bag');
-    if (cartCount > 0) {
-        document.getElementById("cart-count").innerHTML = cartCount;
-    }
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem");
+    
 }
 
 
@@ -293,17 +301,19 @@ function removeFromBag(pId) {
             if (index > -1) {
                 addedcart.splice(index, 1);
             }
-            cartCount--;
         }
     });
+    localStorage.setItem("countItem",addedcart.length);
     localStorage.setItem("cart", JSON.stringify(addedcart));
     alert('Deleted from bag');
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem");
     goToBag();
 
 }
 
 
 function goToBag() {
+    document.getElementById("cart-count").innerHTML = localStorage.getItem("countItem");
     const addedcart = JSON.parse(localStorage.getItem("cart"));
     const cartItems = addedcart.map(data => {
 
@@ -316,15 +326,10 @@ function goToBag() {
             <div>
             <p> <b>Rs.${data['price']}</b></p>
             <p>Size: ${data['size']}</p>
-            
-            
             </div>
-           
         </div>
-        
-        <div style="margin: auto 0px auto 15px;">
-               
-                <span style="color:darkred;" onclick="removeFromBag(${data['id']})" class="material-icons">delete_outline </span>
+        <div style="margin: auto 0px auto 15px;">      
+             <span style="color:darkred;" onclick="removeFromBag(${data['id']})" class="material-icons">delete_outline</span>
             </div>
         
     </div>
@@ -335,15 +340,21 @@ function goToBag() {
 
 }
 
+
 function getTotal(cartArray) {
     var total = 0;
     for (var i = 0; i < cartArray.length; i++) {
         total += cartArray[i].price;
-        // console.log(cartArray[i].price);
     }
-    // console.log(cartArray);
     document.getElementById("displayTotal").innerHTML = 'Rs. ' + total;
 }
 
+
+function orderSuccessful(){
+     alert('Order Successful');
+    // window.location.replace("products.html");
+    window.location.href = "Index.html";
+    
+}
 
 

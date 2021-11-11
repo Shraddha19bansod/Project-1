@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?Family=Trirong|Merriweather">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="cart.css">
-    <script src="index.js" async></script>
+    <script type="text/javascript" src="index.js" async defer></script>
 </head>
+
 <body onload="goToBag()">
     <!--HEADER PART-->
     <header>
@@ -36,24 +37,25 @@
                 <a href="#">CONTACT</a>
 
             </div>
+            <div id="search-bag">
+                <div id="icon1" onclick="goToBag()">
+                    <i class="material-icons" onclick="goToBag()">shopping_bag</i>
+                    <span id="cart-count"></span>
+                </div>
+            </div>
     </header>
-     <!--HEADER PART Closed-->
-     <div class="cart-body" style="margin-bottom: 10px; margin-top: 10px;">
+    <!--HEADER PART Closed-->
+    <div class="cart-body" style="margin-bottom: 10px; margin-top: 10px;">
         <div id="shopping-cart" style=" margin: auto;">
-               
         </div>
-        <div class="total-field  ">          
+        <div class="total-field  ">
             <div class="total-value">
-                <p>Subtotal : </p>
+                <p>Total : </p>
                 <p id="displayTotal"> </p>
             </div>
-            <a href="info.html">
-         <button style="width: 100%; background-color: green; color: white; font-size: larger; "> Purchase</button>
-        </a> 
+                <button onclick="proceedOrder()" style="width: 100%; background-color: green; color: white; font-size: larger; ">
+                    Proceed To Order</button>
         </div>
-        
-
-
 
     </div>
 
@@ -86,6 +88,6 @@
     <div class="text">
         <p style="text-align: center;"><span>Copyright &copy2021 All rights reserved</span></p>
     </div>
-    </body>
+</body>
 
 </html>

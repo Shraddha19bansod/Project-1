@@ -11,21 +11,15 @@
     <link rel="stylesheet" href="index.css">
     <script src="index.js" async></script>
 </head>
-<body" ononline="loadIndex()">
+<body ononline="loadIndex()" onload="loadCount()">
     <!--HEADER PART-->
-    <header>
+    <header >
         <div class="header-1">
             <div>
                 <a href="#" class="logo"><i class="shopping"></i>
                     <span style="font-size: 40px; font-weight: bolder;">FOOTWEAR</span>
                 </a>
             </div>
-          <!--  <div>
-                <form action="" class="search-box-container">
-                    <input type="search" id="search-box" placeholder="search here...">
-                    <i class="material-icons">search</i>
-                </form>
-            </div> -->
         </div>
         <div class="header-2">
             <span href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
@@ -40,7 +34,7 @@
                 <a href="#">ABOUT </a>
                 <a href="#">CONTACT</a>
             </div>
-            <div id="search-bag">
+            <div id="search-bag" >
                 <div class="search-box-container" id="search-box">
                     <input type="search" class="search-box" placeholder="search here...">
                     <i class="material-icons">search</i>
@@ -48,7 +42,7 @@
              
                 <a href="cart.html" id="icon1" >
                     <i class="material-icons" >shopping_bag</i>
-                    <span id="cart-count" style="font-size: 0.7em; background-color: darkred; color: white;"></span>
+                    <span id="cart-count" >0</span>
                 </a>
             
         </div>
@@ -69,19 +63,19 @@
 
             </div>
             <div class="banner-1" onclick="goToProduct('female')">
-                <img src="Image/W1.jpg" />
+                <img src="Image/W1.jpg" /> 
             </div>
         </div>
         <div class="section-3">
             <h4>BEST SELLERS</h4>
             <div id="Mproduct"></div>
             <div class="card-2">
-                <img src="Image/3.jpg " />
-                <img src="Image/1.jpg" />
-                <img src="Image/9.jpg" />
-                <img src="Image/shoe2.jpg" />
-                <img src="Image/2.jpg" />
-                <img src="Image/shoe7.jpg" />
+               <a href="products.html"> <img src="Image/3.jpg " /> </a>
+               <a href="products.html"> <img src="Image/1.jpg" /> </a>
+               <a href="products.html"> <img src="Image/9.jpg" /> </a>
+               <a href="products.html"> <img src="Image/shoe2.jpg" /> </a>
+               <a href="products.html"> <img src="Image/2.jpg" /></a>
+               <a href="products.html"> <img src="Image/shoe7.jpg" /></a>
             </div>
 
             <div class="row">

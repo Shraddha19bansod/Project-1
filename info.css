@@ -12,6 +12,10 @@
 * {
     box-sizing: border-box;
   }
+  #search-bag{
+    padding: 0px;
+    color:rgb(153, 245, 245);
+}  
   
   .row {
     margin: 10px 0px 10px 0px;
@@ -48,7 +52,7 @@
   input[type=text] {
     width: 100%;
     margin-bottom: 20px;
-    padding: 12px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
   }
@@ -64,20 +68,20 @@
     font-size: 15px;
   }
   
-  .btn {
-    background-color: #04AA6D;
+  .btn1 {
+    background-color: #04AA6D !important;
     color: white;
-    padding: 12px;
+    padding: 10px !important;
     margin: 10px 0;
     border: none;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 15px !important;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 17px  !important;
   }
   
-  .btn:hover {
-    background-color: #45a049;
+  .btn1:hover {
+    background-color: #45a049 !important;
   }
   
   
